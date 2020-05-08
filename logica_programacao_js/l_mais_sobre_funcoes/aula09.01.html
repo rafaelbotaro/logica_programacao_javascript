@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Função Recursiva</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Função Recursiva</h1>
+
+        <script>
+            
+            // 3 forma - Função recursiva
+            function dizBla(n){
+                return(n > 1) ? dizBla(--n) + 'bla' : 'bla';
+            }
+
+            console.log(dizBla(2));
+            console.log(dizBla(2));
+
+
+            //  1 forma
+            /* function dizBla(n){            
+                    var msg = '';
+                        while(n--){
+                            msg += 'bla';
+                        }
+                    return msg;
+                }
+            */
+
+            // 2 forma
+            /* function dizBla(n){            
+                    if(n > 1){
+                        return dizBla(--n) +' bla';
+                    }else{
+                        return ' bla';
+                    }
+                }
+            */
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Funções Que Retornam Valores</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>CALCULAR ÁREA</h1>
+        <h3>Clique em um dos botões abaixo</h3>
+
+        <button onclick="mostrarAreaAlert()">Mostrar Área com Alert</button>
+        <button onclick="mostrarAreaOutput()">Mostrar Área com Output</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            function mostrarAreaAlert(){
+                var largura = parseFloat(prompt("Digite a largura: "));
+                var altura = parseFloat(prompt("Digite a altura: "));
+
+                var area = calcularArea(largura, altura);
+                alert("A área total do terreno é "+area+" metros quadrados.");
+            }
+
+            function mostrarAreaOutput(){
+                var largura = parseFloat(prompt("Digite a largura: "));
+                var altura = parseFloat(prompt("Digite a altura: "));
+                
+                var area = calcularArea(largura, altura);
+                document.querySelector('#output').innerHTML = "<br>A área total do terreno é "+area+" metros quadrados.";
+            }
+
+            function calcularArea(l, a){
+                return l * a;
+            }
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Instânciar Objetos</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Objetos</h1>
+
+        <div id="output"></div>
+
+        <script>
+
+            //  Instanciou um objeto chamado produto1
+            var produto1 = new Object();    
+            produto1.nome = 'Caneta';
+            produto1.preco = 2.5;
+            produto1.qtd = 10;
+
+            /*
+
+            //  Criou um método (uma ação) sobre o objeto
+            produto1.comprar() = function(quant){    
+                if(!quant){
+                    quant = 1;
+                }
+                console.log('Comprou caneta');
+                //this.estoque--;
+                this.estoque = this.estoque - quant;
+                console.log(this.estoque);
+            }
+            
+            */
+            
+            var msg = ' ';
+
+            msg += 'Nome: '+produto1.nome + '<br>';
+            msg += 'Preço: '+produto1.preco+ '<br>';
+            msg += 'Quantidade: '+produto1.qtd+ '<br>';
+
+            var output = document.querySelector('#output').innerHTML = msg;
+            
+        </script>
+
+    </body>
+
+</html>

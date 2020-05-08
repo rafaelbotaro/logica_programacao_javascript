@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Arrays Exercício 2</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>ARRAYS</h1>
+
+        <div id="output"></div>
+
+        <script>
+
+            var cont = 0;
+            var total = 0;
+
+            var nums = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+
+            for(var i = 0; i < nums.length; i++){
+                if(nums[i] % 2 === 0){
+                    total += nums[i];
+                }
+                cont++;
+            }
+
+           alert('O total dos números pares é '+total);
+
+        </script>
+
+    </body>
+
+</html>

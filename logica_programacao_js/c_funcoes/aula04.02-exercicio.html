@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício Calculadora</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Lógica de Programação com JavaScript</h1>
+        <h2>Calculadora</h2>
+
+        <button onclick="soma()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mult()">x</button>
+        <button onclick="div()">/</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            var num1 = parseFloat(prompt("Digite um número e escolha a operação abaixo: "));
+
+            escreve();
+
+            function escreve(){
+                var output = document.querySelector('#output');
+                output.innerHTML = num1;
+            }
+
+            function soma(){
+                var num2 = parseFloat(prompt("Digite outro número: "));
+                num1 += num2;
+                escreve();
+            }
+
+            function sub(){
+                var num2 = parseFloat(prompt("Digite outro número: "));
+                num1 -= num2;
+                escreve();
+            }
+
+            function mult(){
+                var num2 = parseFloat(prompt("Digite outro número: "));
+                num1 *= num2;
+                escreve();
+            }
+
+            function div(){
+                var num2 = parseFloat(prompt("Digite outro número: "));
+                num1 /= num2;
+                escreve();
+            }
+
+        </script>
+
+    </body>
+
+</html>

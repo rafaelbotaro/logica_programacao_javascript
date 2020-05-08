@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício - Vetores e Matrizes</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>NOTAS</h1><br>
+
+        <div id="output"></div>
+
+        <script>
+
+            var alunos = [
+                {nome: 'Maria', notas: [5, 6, 4, 9]},
+                {nome: 'José', notas: [2, 8, 5, 6]},
+                {nome: 'João', notas: [3, 6, 7, 8]},
+                {nome: 'Ana', notas: [2, 8, 9, 9]},
+                {nome: 'Lúcia', notas: [2, 1, 8, 5]},
+            ];
+            
+            var msg = " ";
+            var mediaAnual = 0;
+            var mediaAlunos = 0;
+
+            for(var i = 0; i < alunos.length; i++){
+
+                msg += '<p><b>'+alunos[i].nome+'</b></p>';
+                var notas = alunos[i].notas;
+                msg += '<p>Notas: '+notas.join(' | ')+'</p>';
+                var totalNotas = 0;
+
+                for(var j = 0; j < notas.length; j++){
+                    totalNotas += notas[j];
+                }
+                var media = totalNotas / notas.length;
+                mediaAlunos += media;
+                msg += '<p>A média é: '+media+'</p><hr>'
+            }
+            mediaAlunos = mediaAlunos / alunos.length;
+            msg += '<p>A média geral é: '+mediaAlunos+'</p><hr>'
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+
+    </body>
+
+</html>

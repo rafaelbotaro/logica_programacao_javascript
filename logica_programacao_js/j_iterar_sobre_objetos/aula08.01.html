@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Iterar Sobre Objetos</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="output"></div>
+
+        <script>
+            
+            var msg = " ";
+
+            var pessoa = {
+                nome: 'Rafael',
+                sobrenome: 'Botaro',
+                idade: '37 anos',
+                peso: '80 quilos'
+            }
+
+            for(propriedade in pessoa){
+                console.log(propriedade+': '+pessoa[propriedade]);
+            }
+            
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+
+    </body>
+
+</html>

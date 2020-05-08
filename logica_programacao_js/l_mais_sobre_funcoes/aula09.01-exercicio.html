@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Função Recursiva</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Função Recursiva</h1>
+
+        <script>
+            
+            //  1 forma
+            function fibonacci(n){
+                var a = 1;
+                var b = 0;
+                var temp;
+
+                while(n--){
+                    temp = a;
+                    a = a + b;
+                    b = temp;
+                }
+                return b;
+            }
+            console.log(fibonacci(3));
+            console.log(fibonacci(6));
+
+
+            // 2 forma - Função recursiva
+            function fibonacci2(n){
+                if(n <= 2){
+                    return 1;
+                }
+                return fibonacci2(n - 1) + fibonacci2(n - 2);
+            }
+
+            console.log(fibonacci2(3));
+            console.log(fibonacci2(6));
+
+        </script>
+
+    </body>
+
+</html>

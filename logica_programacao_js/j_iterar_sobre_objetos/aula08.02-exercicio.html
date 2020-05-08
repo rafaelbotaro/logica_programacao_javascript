@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 1 - Função Construtora</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Dados dos Alunos</h1>
+        <div id="output"></div>
+
+        <script>
+
+            function Endereco(dados){
+                this.logradouro = dados.logradouro || '';
+                this.num = dados.num || '';
+                this.complemento = dados.complemento || '';
+                this.cidade = dados.cidade || '';
+                this.estado = dados.estado || '';
+                this.cep = dados.cep || '';
+            }
+
+            var alunos = [
+                {nome: 'Daniel', id: 112233, endereco: new Endereco({logradouro: 'Rua 1', num: 10, complemento: 'Sobrado 10', cidade: 'Marília', estado: 'SP', cep: '17510-000'})},
+
+                {nome: 'José', id: 112244, endereco: new Endereco({logradouro: 'Rua 2', num: 20, complemento: 'Ap 5', cidade: 'Marília', estado: 'SP', cep: '17511-000'})},
+
+                {nome: 'João', id: 113344, endereco: new Endereco({logradouro: 'Rua 3', num: 30, complemento: 'Sobrado 50', cidade: 'Marília', estado: 'SP', cep: '17512-000'})},
+
+                {nome: 'Maria', id: 114444, endereco: new Endereco({logradouro: 'Rua 4', num: 40, complemento: 'Ap 10', cidade: 'Marília', estado: 'SP', cep: '17513-000'})},
+
+                {nome: 'Ana', id: 114555, endereco: new Endereco({logradouro: 'Rua 5', num: 50, complemento: 'Sobrado 30', cidade: 'Marília', estado: 'SP', cep: '17514-000'})},
+            ];
+        
+            var msg = "";
+        
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+
+    </body>
+
+</html>

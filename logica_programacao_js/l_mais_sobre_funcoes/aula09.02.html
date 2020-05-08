@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Memoização - Função Recursiva</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Memoização - Função Recursiva</h1>
+
+        <script>
+            var chamou3 = 0;
+            
+            //  1 forma
+            function fibonacci(n){
+                var a = 1;
+                var b = 0;
+                var temp;
+
+                while(n--){
+                    temp = a;
+                    a = a + b;
+                    b = temp;
+                }
+                return b;
+            }
+            console.log(fibonacci(3));
+            console.log(fibonacci(6));
+
+
+            // 2 forma - Função recursiva
+            function fibonacci2(n){
+                if(n <= 2){
+                    return 1;
+                }
+                return fibonacci2(n - 1) + fibonacci2(n - 2);
+            }
+
+            console.log(fibonacci2(3));
+            console.log(fibonacci2(6));
+
+
+             // 2 forma - Memoização - Função recursiva
+             function fibonacci3(n, cache){
+                chamou3++;
+                cache = cache || {};
+                if(cache[n]) return cache[n];
+
+                if(n <= 2) return 1;
+                cache[n] = fibonacci3(n - 1, cache) + fibonacci3(n - 2, cache);
+                return cache[n];
+            }
+            
+            console.log('------------')
+            console.log(fibonacci3(30));
+            console.log('chamou3', chamou3);
+
+        </script>
+
+    </body>
+
+</html>

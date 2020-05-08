@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CallBacks</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>CallBacks</h1>
+
+        <script>
+            
+            function teste1(){
+                console.log('Teste 1 chamado');
+            }
+
+            function teste2(p){
+                console.log('Teste 2 chamado recebendo p', p);
+            }
+
+            function executa(cb){
+                console.log('Executa chamado');
+
+                if(typeof cb === 'function'){
+                    cb('parametro de callback');
+                }
+            }
+
+            //executa();
+            executa(teste1);
+
+            executa(function(x){
+                console.log('Função anônima', x);
+            })
+
+        </script>
+
+    </body>
+
+</html>

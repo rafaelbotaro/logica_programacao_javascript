@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício sobre Arrays de Objetos</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>AGENDA</h1><br>
+
+        <div id="output"></div>
+
+        <script>
+
+           var user1 = new Object();
+           user1.nome = 'Maria';
+           user1.email = 'maria@email.com';
+
+           var user2 = new Object();
+           user2.nome = 'José';
+           user2.email = 'jose@email.com';
+
+           var user3 = new Object();
+           user3.nome = 'João';
+           user3.email = 'joao@email.com';
+            
+           var users = new Array(user1, user2, user3);
+           console.log(users); 
+
+           var msg = " ";
+           var x = 0;
+
+           while(users[x]){
+               msg += "<h2>Nome: "+users[x].nome+"</h2>"
+               msg += "<h3>Email: "+users[x].email+"</h3><br>"
+               x++;
+           }
+
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+
+    </body>
+
+</html>

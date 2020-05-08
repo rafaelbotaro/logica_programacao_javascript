@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Arrays de Objetos</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>ESTOQUE</h1><br>
+
+        <div id="output"></div>
+
+        <script>
+
+            var produtos = [
+                {"nome": "Caneta", "preco": 3},
+                {"nome": "Lápis", "preco": 2},
+                {"nome": "Borracha", "preco": 1}
+            ];
+            
+            var msg = " ";
+
+            for(var i = 0; i < produtos.length; i++){
+                msg += "<h2>Produto: "+produtos[i].nome+"</h2>"
+                msg += "<h3>Preço: R$ "+produtos[i].preco+" reais.</h3><br>"
+            }
+
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+
+    </body>
+
+</html>

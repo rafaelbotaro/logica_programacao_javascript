@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Funções Com Parâmetro</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Lógica de Programação com JavaScript</h1>
+        <h2>Funções que recebem parâmetros</h2>
+
+        <button onclick="mostrarArea(largura, altura)">Mostrar Área</button>
+
+        <script>
+      
+            alert("CÁLCULO DE ÁREA");
+
+            var largura = parseFloat(prompt("Digite a largura: "));
+            var altura = parseFloat(prompt("Digite a altura: "));
+
+            function mostrarArea(l, a){
+                var area = l * a;
+                alert("A área total do terreno é "+area+" metros quadrados.");
+            }
+
+        </script>
+
+    </body>
+
+</html>

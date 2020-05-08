@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Return Break Continue</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Return Break Continue</h1>
+
+        <script>
+            
+            //   Return
+            function testeSalto(){
+                console.log(i);
+                for(var i = 0; i < 10; i++){
+                    if(i === 5){
+                        return 'Fim da função';
+                    }
+                }
+            }
+
+            var teste = testeSalto();
+            console.log(teste);
+
+
+            //  Continue
+            function testeSalto2(){
+                for(var i = 0; i < 10; i++){
+                    if(i === 5){
+                        continue;
+                    }
+                console.log(i);
+                }
+                console.log('Fim da função');
+            }
+
+            var teste = testeSalto();
+            console.log(teste);
+
+
+             //  Break
+             function testeSalto2(){
+                for(var i = 0; i < 10; i++){
+                    if(i === 5){
+                        break;
+                    }
+                console.log(i);
+                }
+                console.log('---------------');
+                console.log('Fim da função');
+            }
+
+            var teste = testeSalto();
+            console.log(teste);
+        </script>
+
+    </body>
+
+</html>

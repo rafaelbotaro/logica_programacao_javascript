@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Referência vs Valor</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Referência vs Valor</h1>
+        <div id="output"></div>
+
+        <script>
+            
+          var nome = ["Rafael"];
+          var nome2 = nome;
+
+          console.log(nome);
+          console.log(nome2);
+
+          nome2[0] = "Maria";
+
+          console.log(nome);
+          console.log(nome2);
+
+        </script>
+
+    </body>
+
+</html>

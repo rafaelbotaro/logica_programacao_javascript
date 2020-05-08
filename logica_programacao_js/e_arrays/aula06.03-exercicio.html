@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício sobre Arrays de Objetos</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>AGENDA</h1><br>
+
+        <div id="output"></div>
+
+        <script>
+
+            var agenda = [
+                {"nome": "Rafael Botaro", "email": "rafaelbotaro@hotmail.com"},
+                {"nome": "Alessandra Morais", "email": "alemorais.shimizu@gmail.com"},
+                {"nome": "Valéria Botaro", "email": "valeria_botaro@hotmail.com"}
+            ];
+            
+            var msg = " ";
+
+            for(var i = 0; i < agenda.length; i++){
+                msg += "<h2>Nome: "+agenda[i].nome+"</h2>"
+                msg += "<h3>Email: "+agenda[i].email+"</h3><br>"
+            }
+
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+
+    </body>
+
+</html>

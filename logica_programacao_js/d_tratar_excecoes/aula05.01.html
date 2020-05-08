@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Try Catch</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h2>CALCULADORA</h2>
+
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">x</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+        <button onclick="limpar()">Clear</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            var n1 = parseFloat(prompt('Digite um número e escolha a operação abaixo: '));
+
+            escreve(n1);
+
+            function limpar(){
+                n1 = 0;
+                escreve(n1);
+            }
+
+            function iniciarCalculo(simbolo){
+                var n1 = parseFloat(document.querySelector('#output').textContent);
+                var n2 = parseFloat(prompt('Digite outro número: '));
+
+                try{
+                    var msg = calcular(simbolo, n1, n2);
+                }catch{
+                    alert(e);
+                    return;
+                }
+                
+                escreve(msg);
+            }
+
+            function escreve(mensagem){
+                var output = document.querySelector('#output');
+                output.innerHTML = mensagem;
+            }
+
+            function calcular(simbolo, n1, n2){
+
+                if (simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/'){
+                    alert("Digite um símbolo válido.")
+                    return 0;
+                }
+
+                if(isNaN(n1) || isNaN(n2)){
+                    alert("Somente permitido digitar números.")
+                    return 0;
+                }
+
+                var numeroCalculado = null;
+
+                switch(simbolo){
+
+                    case '+':
+                    numeroCalculado = n1 + n2;
+                    break;
+
+                    case '-':
+                    numeroCalculado = n1 - n2;
+                    break;
+
+                    case '*':
+                    numeroCalculado = n1 * n2;
+                    break;
+
+                    case '/':
+                    numeroCalculado = n1 / n2;
+                }
+                return numeroCalculado;
+            }
+
+        </script>
+
+    </body>
+
+</html>

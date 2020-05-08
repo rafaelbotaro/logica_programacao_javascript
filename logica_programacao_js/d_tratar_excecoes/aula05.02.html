@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Try Catch 2</title>
+
+        <style  type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>CALCULAR ÁREA</h1>
+        <h3>Clique em um dos botões abaixo</h3>
+
+        <button onclick="mostrarAreaAlert()">Mostrar Área com Alert</button>
+        <button onclick="mostrarAreaOutput()">Mostrar Área com Output</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            function mostrarAreaAlert(){
+                var largura = parseFloat(prompt("Digite a largura: "));
+                var altura = parseFloat(prompt("Digite a altura: "));
+
+                try{
+                    var area = calcularArea(largura, altura);
+                }catch(e){
+                    alert(e);
+                }
+
+                alert("A área total do terreno é "+area+" metros quadrados.");
+            }
+
+            function mostrarAreaOutput(){
+                var largura = parseFloat(prompt("Digite a largura: "));
+                var altura = parseFloat(prompt("Digite a altura: "));
+                
+                try{
+                    var area = calcularArea(largura, altura);
+                }catch(e){
+                    alert(e);
+                }
+
+                document.querySelector('#output').innerHTML = "<br>A área total do terreno é "+area+" metros quadrados.";
+            }
+
+            mostrarAreaAlert();
+
+            function calcularArea(l, a){
+
+                if(l === undefined || a === undefined){
+                    throw new Error("Você só pode digitar números.")
+                }
+
+                if(isNaN(l) || isNaN(a)){
+                    throw new Error("Digite apenas números.")
+                }
+
+                return l * a;
+            }
+
+        </script>
+
+    </body>
+
+</html>
